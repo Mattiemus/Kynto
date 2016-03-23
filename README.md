@@ -6,9 +6,15 @@ mission critical application. Note that I wrote this when I was 16, so the code 
 of what I can do now - and much of the code is either buggy or unsafe.
 
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/header.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot1.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot2.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot3.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot4.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot5.png?raw=true)
+
 ![Screenshot](https://github.com/Mattiemus/Kynto/blob/master/screenshot6.png?raw=true)
