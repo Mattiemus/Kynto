@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47BD8D1C-9D85-4171-8747-77B9E1075DD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KyntoLib</RootNamespace>
+    <AssemblyName>KyntoLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\JSON.cs" />
+    <Compile Include="Data\XML.cs" />
+    <Compile Include="Encryption\RC4Encryption.cs" />
+    <Compile Include="Helpers\ArrayHelper.cs" />
+    <Compile Include="Helpers\SerializableDictionary.cs" />
+    <Compile Include="Helpers\Timestamp.cs" />
+    <Compile Include="Interfaces\Database\IDatabaseInterface.cs" />
+    <Compile Include="Interfaces\Database\Query\IDatabaseQuery.cs" />
+    <Compile Include="Interfaces\Database\Tables\IDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IFurniDataDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\ISsoTicketsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IItemsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\ISavedImsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMessagesDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IFurniDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IRanksDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IClothesDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\ICatalogueItemsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\ICataloguePagesDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IPublicsItemsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IPublicsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IRoomsRightsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IRoomsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersCommandsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersFriendsDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersClothesDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersBanDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersBadgesDatabaseTable.cs" />
+    <Compile Include="Interfaces\Database\Tables\IMembersDatabaseTable.cs" />
+    <Compile Include="Interfaces\Events\IEventArguments.cs" />
+    <Compile Include="Interfaces\Events\EventTypes.cs" />
+    <Compile Include="Interfaces\Instances\Connections\IBackendSocketConnection.cs" />
+    <Compile Include="Interfaces\Instances\Connections\IGameSocketConnection.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\Avatars\IAvatar.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\Bots\IBots.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\Furni\IFurniManager.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\Furni\IFurni.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\Heightmap\IHeightmapManager.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\IPrivateRoom.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\IPublicRoom.cs" />
+    <Compile Include="Interfaces\Instances\Rooms\IRoom.cs" />
+    <Compile Include="Interfaces\Instances\User\Data\IActivatedCommands.cs" />
+    <Compile Include="Interfaces\Instances\User\Data\IAvaliableCommands.cs" />
+    <Compile Include="Interfaces\Instances\User\Data\IRightsData.cs" />
+    <Compile Include="Interfaces\Instances\User\Data\IRoomRightsData.cs" />
+    <Compile Include="Interfaces\Instances\User\IInventoryService.cs" />
+    <Compile Include="Interfaces\Instances\User\IPdaService.cs" />
+    <Compile Include="Interfaces\Instances\User\IUser.cs" />
+    <Compile Include="Interfaces\Instances\User\IUserData.cs" />
+    <Compile Include="Interfaces\Managers\ICatalogueManager.cs" />
+    <Compile Include="Interfaces\Managers\IEventsManager.cs" />
+    <Compile Include="Interfaces\Managers\IPluginsManager.cs" />
+    <Compile Include="Interfaces\Managers\IRoomsManager.cs" />
+    <Compile Include="Interfaces\Managers\IServerManager.cs" />
+    <Compile Include="Interfaces\Managers\IUsersManager.cs" />
+    <Compile Include="Interfaces\Plugins\IPlugin.cs" />
+    <Compile Include="Interfaces\Services\IBackEndSocketsService.cs" />
+    <Compile Include="Interfaces\Services\IDatabaseService.cs" />
+    <Compile Include="Interfaces\Services\IGameSocketsService.cs" />
+    <Compile Include="Interfaces\Services\ILoggingService.cs" />
+    <Compile Include="Interfaces\Services\ISettingsService.cs" />
+    <Compile Include="Interfaces\Services\IThreadService.cs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

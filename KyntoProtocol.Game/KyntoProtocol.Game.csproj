@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC155496-1283-48D6-9E83-EB83D81AE9C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KyntoProtocol.Game</RootNamespace>
+    <AssemblyName>KyntoProtocol.Game</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Protocols\Game\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatCommands\ChatCommandsManager.cs" />
+    <Compile Include="ChatCommands\IChatCommand.cs" />
+    <Compile Include="ChatCommands\KickCommand.cs" />
+    <Compile Include="ChatCommands\ToggleBrbCommand.cs" />
+    <Compile Include="ChatCommands\ToggleWarpCommand.cs" />
+    <Compile Include="EventHandlers\ApiEventHandlers.cs" />
+    <Compile Include="EventHandlers\AvatarEventHandlers.cs" />
+    <Compile Include="EventHandlers\ConnectionEventHandlers.cs" />
+    <Compile Include="EventHandlers\FurniEventHandlers.cs" />
+    <Compile Include="EventHandlers\InventoryEventHandlers.cs" />
+    <Compile Include="EventHandlers\RoomEventHandlers.cs" />
+    <Compile Include="PacketHandlers\ApiPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\AvatarPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\CataloguePacketHandlers.cs" />
+    <Compile Include="PacketHandlers\ClothesChangerPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\ConnectionPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\FurniPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\NavigatorPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\PacketHandler.cs" />
+    <Compile Include="PacketHandlers\PdaPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\RoomMakerPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\RoomPacketHandlers.cs" />
+    <Compile Include="GameProtocolPlugin.cs" />
+    <Compile Include="PacketHandlers\ToolbarPacketHandlers.cs" />
+    <Compile Include="PacketHandlers\TradingPacketHandlers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KyntoLib\KyntoLib.csproj">
+      <Project>{47BD8D1C-9D85-4171-8747-77B9E1075DD2}</Project>
+      <Name>KyntoLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KyntoProtocol.Game.Packets\KyntoProtocol.Game.Packets.csproj">
+      <Project>{A9B65FBE-9F2E-4379-9B18-AD9134FA5FBB}</Project>
+      <Name>KyntoProtocol.Game.Packets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

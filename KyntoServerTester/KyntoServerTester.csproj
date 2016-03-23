@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9197247-8730-40BB-9E3E-48F3AD57C4EF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KyntoServerTester</RootNamespace>
+    <AssemblyName>KyntoServerTester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugClient\DebugClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugClient\DebugClientForm.Designer.cs">
+      <DependentUpon>DebugClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\Monitors\Managers\CatalogueMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\CatalogueMonitorForm.Designer.cs">
+      <DependentUpon>CatalogueMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\ControllersMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\ControllersMonitorForm.Designer.cs">
+      <DependentUpon>ControllersMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\EventsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\EventsMonitorForm.Designer.cs">
+      <DependentUpon>EventsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\PluginsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\PluginsMonitorForm.Designer.cs">
+      <DependentUpon>PluginsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\RoomsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\RoomsMonitorForm.Designer.cs">
+      <DependentUpon>RoomsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\UsersMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Managers\UsersMonitorForm.Designer.cs">
+      <DependentUpon>UsersMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\BackendSocketsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\BackendSocketsMonitorForm.Designer.cs">
+      <DependentUpon>BackendSocketsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\DatabaseMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\DatabaseMonitorForm.Designer.cs">
+      <DependentUpon>DatabaseMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\GameSocketsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\GameSocketsMonitorForm.Designer.cs">
+      <DependentUpon>GameSocketsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\LoggingMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\LoggingMonitorForm.Designer.cs">
+      <DependentUpon>LoggingMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\SettingsMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\SettingsMonitorForm.Designer.cs">
+      <DependentUpon>SettingsMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\ThreadMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\Monitors\Services\ThreadMonitorForm.Designer.cs">
+      <DependentUpon>ThreadMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\ServerStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server\ServerStatisticsForm.Designer.cs">
+      <DependentUpon>ServerStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DebugClient\DebugClientForm.resx">
+      <DependentUpon>DebugClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Server\Monitors\Services\DatabaseMonitorForm.resx">
+      <DependentUpon>DatabaseMonitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Server\ServerStatisticsForm.resx">
+      <DependentUpon>ServerStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KyntoLib\KyntoLib.csproj">
+      <Project>{47BD8D1C-9D85-4171-8747-77B9E1075DD2}</Project>
+      <Name>KyntoLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KyntoServer\KyntoServer.csproj">
+      <Project>{D65D5A09-B66B-44A2-B7FB-42276C3FABD7}</Project>
+      <Name>KyntoServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

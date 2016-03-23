@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D65D5A09-B66B-44A2-B7FB-42276C3FABD7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KyntoServer</RootNamespace>
+    <AssemblyName>KyntoServer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Instances\Connections\BackendSocketConnection.cs" />
+    <Compile Include="Instances\Connections\GameSocketConnection.cs" />
+    <Compile Include="Instances\Rooms\Avatars\Avatar.cs" />
+    <Compile Include="Instances\Rooms\Bots\BasicBot.cs" />
+    <Compile Include="Instances\Rooms\Furni\BasicFurniItem.cs" />
+    <Compile Include="Instances\Rooms\Furni\FurniManager.cs" />
+    <Compile Include="Instances\Rooms\Heightmap\HeightmapManager.cs" />
+    <Compile Include="Instances\Rooms\Pathfinding\Pathfinder.cs" />
+    <Compile Include="Instances\Rooms\Pathfinding\PriorityQueue.cs" />
+    <Compile Include="Instances\Rooms\Pathfinding\RotationalCalculator.cs" />
+    <Compile Include="Instances\Rooms\PrivateRoom.cs" />
+    <Compile Include="Instances\Rooms\PublicRoom.cs" />
+    <Compile Include="Instances\Rooms\Room.cs" />
+    <Compile Include="Instances\User\Data\ActivatedCommands.cs" />
+    <Compile Include="Instances\User\Data\AvaliableCommands.cs" />
+    <Compile Include="Instances\User\Data\RightsData.cs" />
+    <Compile Include="Instances\User\Data\RoomRightsData.cs" />
+    <Compile Include="Instances\User\InventoryService.cs" />
+    <Compile Include="Instances\User\PdaService.cs" />
+    <Compile Include="Instances\User\UserData.cs" />
+    <Compile Include="Managers\CatalogueManager.cs" />
+    <Compile Include="Managers\EventsManager.cs" />
+    <Compile Include="Managers\PluginsManager.cs" />
+    <Compile Include="Managers\RoomsManager.cs" />
+    <Compile Include="Managers\ServerManager.cs" />
+    <Compile Include="Managers\UsersManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BackendSocketsService.cs" />
+    <Compile Include="Services\DatabaseService.cs" />
+    <Compile Include="Services\GameSocketsService.cs" />
+    <Compile Include="Services\LoggingService.cs" />
+    <Compile Include="Services\SettingsService.cs" />
+    <Compile Include="Services\ThreadService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KyntoLib\KyntoLib.csproj">
+      <Project>{47BD8D1C-9D85-4171-8747-77B9E1075DD2}</Project>
+      <Name>KyntoLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
